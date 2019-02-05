@@ -1,0 +1,9 @@
+<h3 class="currency-title">Валюта</h3>
+<ul class="currency-list" *ngIf="currencyList">
+    <li *ngFor="let currency of currencyList"
+        (click)="setCurrency(currency)"
+        class="currency-item"
+        [class.currency-item--current]="currency === currentCurrency?.name">
+        {{currency}}
+    </li>
+</ul>

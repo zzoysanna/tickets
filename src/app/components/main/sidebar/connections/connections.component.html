@@ -1,0 +1,12 @@
+<h3 class="connections-title">Количество пересадок</h3>
+<ul class="connections-list">
+    <li *ngFor="let connection of connectionsList" class="connections-item">
+        <label>
+            <input type="checkbox"
+                   [value]="connection.stops"
+                   [checked]="connection.checked"
+                   (change)="onChangeInput(connection)">
+            <span>{{connection.title}}</span>
+        </label>
+    </li>
+</ul>

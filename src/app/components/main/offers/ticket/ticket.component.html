@@ -1,0 +1,21 @@
+<div class="ticket" *ngIf="data">
+    <div class="ticket-section ticket-section--left">
+        <div [className]="['ticket-carrier' + ' ' + 'ticket-carrier--' + data.carrier]"></div>
+        <button class="ticket-button">Купить за {{ currency !== 'RUB' ? (price | currency: currency) : price }}</button>
+    </div>
+    <div class="ticket-section ticket-section--right">
+        <div class="ticket-from">
+            <p class="ticket-time">{{ data?.departure_time }}</p>
+            <p class="ticket-airport">{{data?.origin}}, {{data?.origin_name}}</p>
+            <p class="ticket-date">{{data?.departure_date}}</p>
+        </div>
+        <div class="ticket-connections">
+            {{ data?.stops > 0 ? data?.stops + ' пересадки' : '' }}
+        </div>
+        <div class="ticket-to">
+            <p class="ticket-time">{{data?.arrival_time}}</p>
+            <p class="ticket-airport">{{data?.destination}}, {{data?.destination_name}}</p>
+            <p class="ticket-date">{{data?.arrival_date}}</p>
+        </div>
+    </div>
+</div>

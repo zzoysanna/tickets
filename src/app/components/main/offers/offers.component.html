@@ -1,0 +1,7 @@
+<div class="offers-list" *ngIf="filteredTickets">
+    <app-ticket *ngFor="let ticket of filteredTickets"
+                [data]="ticket"
+                [rate]="currentCurrency?.rate"
+                [currency]="currentCurrency?.name">
+    </app-ticket>
+</div>

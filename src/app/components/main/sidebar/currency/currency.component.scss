@@ -1,0 +1,28 @@
+.currency {
+  &-title {
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 8px;
+  }
+  &-item {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #2196F3;
+    border: 1px solid #efefef;
+    cursor: pointer;
+    &:nth-child(1) {
+      border-radius: 8px 0 0 8px;
+    }
+    &:nth-child(3) {
+      border-radius: 0 8px 8px 0;
+    }
+    &:hover {
+      border-color: #2196F3;
+    }
+    &--current {
+      border-color: #2196F3;
+      background: #2196F3;
+      color: #fff;
+    }
+  }
+}

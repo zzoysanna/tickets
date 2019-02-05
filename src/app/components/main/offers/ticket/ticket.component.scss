@@ -1,0 +1,94 @@
+.ticket {
+    margin-bottom: 16px;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: block;
+    &-button {
+        background: #FF6D00;
+        color: #fff;
+        border-radius: 5px;
+        padding: 8px 16px;
+        cursor: pointer;
+        border: 0;
+        font-size: 90%;
+        display: block;
+        width: 100%;
+    }
+    &-carrier {
+        display: block;
+        width: 100%;
+        height: 50px;
+        background-size: 75%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        margin-bottom: 8px;
+        &--TK {
+            background-image: url(http://resources.mynewsdesk.com/image/upload/c_limit,dpr_1.25,f_auto,h_700,q_auto,w_690/r3h8a49zudac88ofrssw.jpg);
+        }
+        &--S7 {
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/S7_new_logo.svg/1280px-S7_new_logo.svg.png);
+        }
+        &--BA {
+            background-image: url(https://i.pinimg.com/originals/4b/47/61/4b4761fa82dfdb5fabd96cbd8a0dde5a.jpg);
+        }
+        &--SU {
+            background-image: url(https://tripway.com/uploads/content/pictures/648/content_640px-Aeroflot_logo.svg.png);
+        }
+    }
+    &-section {
+        display: inline-block;
+        vertical-align: top;
+        padding: 16px;
+        height: 100px;
+        &--left {
+            border-right: 1px dotted #bcbcbc;
+            width: 140px;
+        }
+    }
+    &-from, &-to, &-connections {
+        display: inline-block;
+        vertical-align: top;
+    }
+    &-from, &-to {
+        width: 100px;
+        white-space: nowrap;
+    }
+    &-to {
+        text-align: right;
+    }
+    &-connections {
+        width: 120px;
+        text-align: center;
+        height: 24px;
+        border-bottom: 1px solid #ccc;
+        text-transform: uppercase;
+        color: #666;
+        font-weight: 600;
+        font-size: 80%;
+        line-height: 27px;
+        position: relative;
+        &:after {
+            content: ">";
+            position: absolute;
+            RIGHT: 0;
+            bottom: 0px;
+            line-height: 0;
+            font-size: 17px;
+            color: #ccc;
+        }
+    }
+    &-time {
+        font-size: 32px;
+        margin-bottom: 4px;
+    }
+    &-airport {
+        font-weight: 600;
+        font-size: 90%;
+        margin-bottom: 4px;
+    }
+    &-date {
+        font-size: 90%;
+        color: #8e8e8e;
+    }
+}
